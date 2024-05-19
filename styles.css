@@ -9,7 +9,7 @@ body {
 header {
   position: fixed;
   width: 100%;
-  background-color: #333;
+  background: linear-gradient(to bottom, #333, #666);
   color: white;
   padding: 10px 10px;
   display: flex;
@@ -20,6 +20,7 @@ header {
 }
 
 main {
+  text-align: justify;
   padding: 0% 10%;
   padding-top: 100px;
 }
@@ -33,6 +34,7 @@ section {
 }
 
 .servicios-grid {
+  text-align: justify;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
@@ -154,4 +156,104 @@ nav a:hover {
   .desktop-menu {
     display: none;
   }
+}
+
+/* Estilos para el formulario de contacto */
+#contactForm fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#contactForm div {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#contactForm label {
+  width: 150px; /* Ajusta el ancho según sea necesario */
+  margin-right: 10px;
+  text-align: right;
+}
+
+#contactForm input, #contactForm textarea, #contactForm select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contactForm button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background-color: #666;
+}
+#contactForm input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-file-upload label {
+  background-color: #333;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.custom-file-upload label:hover {
+  background-color: #666;
+}
+
+#file-chosen {
+  font-style: italic;
+}
+
+/* Estilos para el checkbox en línea */
+#contactForm label {
+  display: flex;
+  align-items: center;
+}
+
+#contactForm input[type="checkbox"] {
+  margin-right: 10px; /* Espacio entre el checkbox y el texto */
+}
+
+ul li {
+  margin-bottom: 10px; /* Espacio entre cada elemento li  */
+}
+
+/* Estilos para la sección del equipo */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.equipo-miembro {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.equipo-foto {
+  width:50%;
+  height: auto;
+  margin-bottom: 10px;
 }
