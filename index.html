@@ -32,33 +32,34 @@
     </header>
     <main>
       <section id="quienes-somos">
-        <h2>El estudio.<i class="fa-solid fa-gavel" style="margin-left: 10px;"></i></h2>
+        <h2><i class="fa-solid fa-gavel" style="margin-right: 10px;"></i> El estudio</h2>
         <p>
           El Estudio de Abogados tiene sus raíces en la pasión por la justicia y
           el compromiso con la defensa de los derechos legales de nuestros
           clientes. Fundado hace más de una década, nuestro estudio se ha
           destacado por ofrecer soluciones legales personalizadas y eficientes
           para una amplia gama de problemas legales en Argentina. Nuestra
-          reputación se basa en la dedicación hacia nuestros clientes, la
-          excelencia en nuestro trabajo y la ética profesional que nos
-          caracteriza. Confía en nuestro equipo para defender tus derechos y
-          obtener los resultados que mereces.
+          reputación se basa en la dedicación, la excelencia en nuestro trabajo 
+          y la ética profesional que nos caracteriza. Confía en nuestro equipo 
+          para defender tus derechos y obtener los resultados que mereces.
         </p>
       </section>
 
       <section id="equipo">
-        <h2>Nuestro Equipo<i class="fa-solid fa-user-tie" style="margin-left: 10px;"></i></h2>
+        <h2><i class="fa-solid fa-user-tie" style="margin-left: 10px;"></i> Nuestro Equipo</h2>
         <p>
-          Conoce a nuestro equipo de abogados expertos en diversas áreas del
-          derecho.
+          Conoce a nuestro equipo de expertos en diversas áreas del derecho
         </p>
         <ul>
           <li>
-            <strong>Lic. María González:</strong> Experta en Derecho Civil y
+            <strong>Dra. Cecilia Mustillo:</strong> Experta en Derecho Civil y
             Comercial.
           </li>
           <li>
-            <strong>Dr. Juan Pérez:</strong> Especialista en Derecho Penal.
+            <strong>Dr. Pablo Vázquez:</strong> Especialista en Derecho Penal.
+          </li>
+          <li>
+            <strong>Lic. Ezequiel Criscueli:</strong> Especialista en Derecho de Familia.
           </li>
         </ul>
       </section>
@@ -66,11 +67,11 @@
       <!-- <section id="servicios" class="servicios-grid"> -->
       <section id="servicios" class="">
       <div style="display: flex; flex-direction: column;">
-      <h2>Nuestros valores<i class="fa-solid fa-list-check" style="margin-left: 10px;"></i></h2>
+      <h2><i class="fa-solid fa-list-check" style="margin-left: 10px;"></i> Nuestros valores</h2>
 
       <div class="servicios-grid">
       <div>
-          <h2>Nuestro Compromiso</h2>
+          <h2>Compromiso</h2>
           <p>
             Nuestro estudio de abogados en Argentina se especializa en ofrecer
             soluciones legales personalizadas y eficientes para resolver una
@@ -80,7 +81,7 @@
           </p>
       </div>
       <div>
-          <h2>Nuestra Especialización</h2>
+          <h2>Especialización</h2>
           <p>
             En nuestro estudio, comprendemos la importancia de cada caso y la
             necesidad de una atención individualizada. Ya sea que necesites
@@ -91,14 +92,14 @@
           </p>
       </div>
       <div>
-          <h2>Nuestra Experiencia</h2>
+          <h2>Experiencia</h2>
           <p>
             Con más de una década de experiencia, hemos ayudado a numerosos
             clientes a resolver sus problemas legales de manera efectiva y
-            satisfactoria. Nuestra reputación se basa en la dedicación hacia
-            nuestros clientes, la excelencia en nuestro trabajo y la ética
-            profesional que nos caracteriza. Confía en nuestro equipo para
-            defender tus derechos y obtener los resultados que mereces.
+            satisfactoria. Nuestra reputación se basa en la dedicación, 
+            la excelencia en nuestro trabajo y la ética profesional 
+            que nos caracteriza. Confía en nuestro equipo para defender 
+            tus derechos y obtener los resultados que mereces.
           </p>
       </div>
       </div>
@@ -107,7 +108,7 @@
       </section>
 
       <section id="contacto">
-        <h2>Contacto<i class="fa-regular fa-address-card" style="margin-left: 10px;"></i></h2>
+        <h2><i class="fa-regular fa-address-card" style="margin-left: 10px;"></i> Contacto</h2>
         <form
           id="contactForm"
           action="#"
@@ -117,7 +118,7 @@
           <fieldset>
             <legend>Información Personal</legend>
             <div>
-              <label for="nombre">Nombre:</label>
+              <label for="nombre">Nombre y Apellido:</label>
               <input type="text" id="nombre" name="nombre" >
             </div>
             <div>
@@ -142,39 +143,29 @@
             </div>
             <div>
               <label for="imagen">Imagen:</label>
+              <div class="custom-file-upload">
               <input type="file" id="imagen" name="imagen" accept="image/*" >
+              <label for="imagen">Seleccionar archivo</label>
+              <span id="file-chosen">Ningún archivo seleccionado</span>
             </div>
           </fieldset>
 
           <fieldset>
             <legend>Fuero</legend>
             <div>
-              <label
-                ><input type="radio" name="fuero" value="civil" >Civil</label
-              >
-              <label
-                ><input
-                  type="radio"
-                  name="fuero"
-                  value="labooral"
-                >Laboral</label
-              >
-              <label
-                ><input
-                  type="radio"
-                  name="fuero"
-                  value="comercial"
-                >Comercial</label
-              >
+              <label>
+                <input type="radio" name="fuero" value="civil">Civil</label>
+              <label>
+                <input type="radio" name="fuero" value="laboral">Laboral</label>
+              <label>
+                <input type="radio" name="fuero" value="comercial">Comercial</label>
             </div>
           </fieldset>
 
           <fieldset>
             <div>
-              <label
-                ><input type="checkbox" id="acepto" name="acepto" >Acepto los
-                términos y condiciones</label
-              >
+              <label for="acepto" style="width: auto;">
+                <input type="checkbox" id="acepto" name="acepto" >Acepto los términos y condiciones</label>
             </div>
           </fieldset>
 
@@ -183,7 +174,7 @@
       </section>
     </main>
     <footer>
-      <p>&copy; 2024 Estudio de Abogados. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Powered by Grupo 17 CaC Comisión 24259. Estudio de Abogados. Todos los derechos reservados.</p>
     </footer>
     <script src="script.js"></script>
   </body>
