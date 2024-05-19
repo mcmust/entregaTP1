@@ -1,4 +1,9 @@
-// Open the menu when hovering over the open-menu-btn
+document.getElementById('imagen').addEventListener('change', function () {
+  const fileChosen = document.getElementById('file-chosen');
+  fileChosen.textContent = this.files.length > 0 ? this.files[0].name : 'No file chosen';
+});
+
+// Abre el menú al pasar el cursor sobre el botón de abrir menú
 document
   .querySelector('.open-menu-btn')
   .addEventListener('mouseenter', function () {
@@ -6,7 +11,7 @@ document
     menu.classList.add('active')
   })
 
-// Close the menu when the mouse leaves the mobile-menu area
+// Cierra el menú cuando el mouse abandona el área del menú móvil
 document
   .querySelector('.mobile-menu')
   .addEventListener('mouseleave', function () {
@@ -26,6 +31,6 @@ function validateForm(event) {
     alert('Por favor complete todos los campos.')
     event.preventDefault()
   } else {
-    alert('El formulario se ha enviado.')
+    alert('El formulario se ha enviado correctamente.')
   }
 }
