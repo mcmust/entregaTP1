@@ -1,6 +1,6 @@
 /* secciones generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -8,252 +8,272 @@ body {
 
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background: linear-gradient(to bottom, #333, #666);
   color: white;
-  padding: 10px 10px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   z-index: 1;
+  margin: 0; /* Asegúrate de que no haya margen */
 }
 
+/* Estilo del contenido principal */
 main {
   text-align: justify;
-  padding: 0% 10%;
-  padding-top: 100px;
+  padding: 0% 5% 5%;
+  margin-top: 80px;
 }
 
-section {
+/* Contenidos del Header */
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+header nav {
+  display: none;
+}
+
+/* Estilo de los links del menú en dispositivos de escritorio */
+.desktop-menu {
   display: flex;
-  flex-direction: column;
-  padding: 3% 0%;
-  max-width: 1024px;
-  margin: auto;
-}
-
-.servicios-grid {
-  text-align: justify;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
 }
 
-footer {
-  padding: 30px 10% 10px;
-  text-align: center;
-}
-
-/* menu mobile */
-
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-  background-color: #f0f0f0;
-  transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out;
-  z-index: 1000;
-}
-
-nav.active {
-  transform: translateY(0);
-}
-
-.mobile-menu-links {
-  display: flex;
-  flex-direction: column;
-  background-color: #333;
-  padding: 10px 0px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.mobile-menu.active .mobile-menu-links {
-  max-height: 400px;
-}
-
-.mobile-menu-links a {
+.desktop-menu a {
   color: white;
   text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
-nav a {
-  padding: 10px 10px;
-  color: #333;
+.desktop-menu a:hover {
+  color: #f0a500;
+}
+
+/* Botón del menú móvil */
+.open-menu-btn {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Menú móvil */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu a {
+  color: white;
   text-decoration: none;
-  transition: background-color 0.3s;
+  font-size: 1.5em;
+  margin: 10px 0;
 }
 
-nav a:hover {
-  background-color: #ccc;
+.mobile-menu a:hover {
+  color: #f0a500;
 }
 
-/* Estilos para dispositivos de escritorio */
-@media screen and (min-width: 1201px) {
-  #contactForm {
-    padding: 0% 20%;
-  }
-}
-
-/* Estilos para dispositivos de tablet */
-@media screen and (min-width: 601px) {
-  /* menu desktop */
-  .desktop-menu {
-    display: flex;
-    flex-direction: row;
-  }
-  .desktop-menu a {
-    color: white;
-    font-size: larger;
-    margin: 0 10px;
-  }
-
-  .open-menu-btn {
-    display: none;
-  }
-}
-
-/* Estilos para dispositivos móviles exclusivamente */
-@media screen and (max-width: 600px) {
-  .servicios-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mobile-menu.active {
-    display: block;
-  }
-
-  .mobile-menu-links {
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    overflow: hidden;
-  }
-
-  .mobile-menu-links a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .open-menu-btn {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    color: #333;
-    font-size: 15px;
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
   .desktop-menu {
     display: none;
   }
+  
+  .open-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
 }
 
-/* Estilos para el formulario de contacto */
-#contactForm fieldset {
-  border: 1px solid #ccc;
+/* Estilos para la sección de "El Estudio" */
+#quienes-somos {
+  background-color: #fff;
   padding: 20px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
-#contactForm div {
-  margin-bottom: 15px;
+/* Estilos para la sección de "Nuestro equipo" */
+#equipo {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.equipo-grid {
   display: flex;
-  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#contactForm label {
-  width: 150px; /* Ajusta el ancho según sea necesario */
-  margin-right: 10px;
-  text-align: right;
+.equipo-miembro {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
 }
 
-#contactForm input, #contactForm textarea, #contactForm select {
+.equipo-foto {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilos para la sección de "Nuestros valores" */
+#servicios {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.servicios-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.servicios-grid div {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
   flex: 1;
+  min-width: 250px;
+}
+
+/* Estilos para la sección de "Contacto" */
+#contacto {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form {
+  max-width: 600px; /* Define un ancho máximo para el formulario */
+  margin: 0 auto; /* Centra el formulario en la página */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+form input,
+form textarea,
+form select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-#contactForm button {
+form button {
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
   background-color: #333;
   color: white;
-  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: normal;
+  max-width: 200px; /* Define un ancho máximo */
+  width: auto; /* Permitir que el ancho se ajuste automáticamente */
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
 }
 
-#contactForm button:hover {
-  background-color: #666;
-}
-#contactForm input[type="file"] {
-  display: none;
+form button:hover {
+  background-color: #555;
 }
 
 .custom-file-upload {
-  position: relative;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
 }
 
 .custom-file-upload label {
   background-color: #333;
   color: white;
-  padding: 8px 20px;
+  padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 10px;
 }
 
 .custom-file-upload label:hover {
-  background-color: #666;
+  background-color: #555;
 }
 
-#file-chosen {
-  font-style: italic;
+.custom-file-upload span {
+  font-size: 14px;
 }
 
-/* Estilos para el checkbox en línea */
-#contactForm label {
+/* Alineación de las opciones de Fuero */
+.fuero-options {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-#contactForm input[type="checkbox"] {
-  margin-right: 10px; /* Espacio entre el checkbox y el texto */
-}
-
-ul li {
-  margin-bottom: 10px; /* Espacio entre cada elemento li  */
-}
-
-/* Estilos para la sección del equipo */
-.equipo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.equipo-miembro {
-  background-color: #f0f0f0;
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
   padding: 10px;
-  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.equipo-foto {
-  width:50%;
-  height: auto;
-  margin-bottom: 10px;
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Estilos para el título de cada sección */
+section h2 {
+  margin-top: 40px; /* Ajusta el margen superior para dejar espacio debajo del header */
 }
